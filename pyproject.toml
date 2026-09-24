@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fotoindex"
+version = "0.1.0"
+description = "Offline contact sheets, photo inventories, and exact duplicate detection"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+dependencies = ["Pillow>=10.4,<13"]
+
+[project.scripts]
+fotoindex = "fotoindex.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["fotoindex*"]
